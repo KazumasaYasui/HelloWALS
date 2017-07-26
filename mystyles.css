@@ -1,5 +1,76 @@
+/*
 body{background: white;}
-
 .table{
   border-collapse:collapse;
 }
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+header{
+  width: 100%;
+  background-color: pink;
+  position: fixed;
+  z-index: 2;
+}
+nav{
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title{
+  float: left;
+  width: 200px;
+  line-height: 60px;
+}
+.top-menu{
+  float: right;
+  width: 83%;
+  line-height: 60px;
+}
+.top-menu-item{
+  float: left;
+  width: 25%;
+  list-style: none;
+}
+.top-menu-item a{
+  text-decoration: none;
+  color: white;
+}
+.main{
+  width: 60%;
+  height: 1650px;
+  background-color: lightblue;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.nogi{
+  position: absolute;
+  z-index: 1;
+}
+.nogi2{
+  position: relative;
+  display: inline-block;
+  width: 1900px;
+  height: 800px;
+  background-image: url("../asuka.jpg");
+  background-size: cover;
+  background-size: 530px 800px;
+  background-repeat: repeat-x;
+  background-position: top center;
+}
+.nogi3{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  }
