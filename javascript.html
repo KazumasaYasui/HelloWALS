@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charaset="utf-8">
+  <title>JavaScriptの練習</title>
+  <style>
+    .myStyle{
+      font-weight: bold;
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+<body>
+<h1>見出し</h1>
+<p id="msg">こんにちは！</p>
+<button id="add">Click!</button>
+  <!-- <script src="myscript.js"></script> -->
+  <script>
+/*  var x;
+    x = 10 * 2;
+    x = 10 % 3;
+    x = x + 5;
+    x += 5;
+    x++;
+    x--;
+
+    var s;
+    s = "hello";
+    s = 'hello';
+    s = 'it\'s\n a pe\tn.';
+    s = "hello "+"world";
+    s ="5"+5;
+    console.log(s);*/
+
+
+/*
+比較演算子
+> <
+>= <=
+=== ==
+!== !=
+論理演算子
+AND &&
+OR ||
+NOT !
+*/
+
+/*    var score = 50;
+    if (score > 60) {
+      console.log("ok!");
+    }else if (score > 40) {
+      console.log("soso..."); 
+    }else{
+      console.log("ng!");
+    }*/
+
+/*
+真偽値
+文字列：空文字以外だったらtrue
+数値：0かNaN以外だったらtrue
+true/false
+object：null以外だったらtrue
+undefined,null -> false
+
+三項演算子
+var max,x,y;
+max=(x>y)?x:y;
+*/
+
+    /*var signal = "red";
+    switch (signal){
+      case "red":
+        console.log("stop!");
+        break;
+      case "green":
+      case "blue":
+        console.log("go!");
+        break;
+      case "yellow":
+        console.log("slow down!");
+        break;
+      default:
+        console.log("wrong signal!");
+        break;
+    }*/
+
+/*    var i=0;
+    while(i<10){
+      console.log(i);
+      i++;
+    }*/
+/*    var i=0;
+    do{
+      console.log(i);
+      i++;
+    } while(i<10);*/
+
+    /*for (var i=0;i<10;i++){
+      if (i===5) {
+        // break;
+        continue;
+      }
+      console.log(i);
+    }*/
+
+    // alert("hello");
+    // var answer = confirm("are you sure?");
+    // console.log(answer);
+    // var name = prompt("お名前は？","志田愛佳");
+    // console.log(name);
+
+    /*
+関数：複数の処理
+
+function 関数名(引数){
+  処理
+  return 返り値
+}
+    */
+    /*function hello(name){
+      var msg = "hello " + name;//ローカル変数
+      return msg;
+    }
+
+    var hello = function(name){//無名関数、匿名関数
+      var msg = "hello " + name;//ローカル変数
+      return msg;
+    };
+    var greet = hello("Tom");
+    console.log(greet);
+    // console.log(msg);
+    // hello("Bob");*/
+
+    /*即時関数
+    (function(name){
+      console.log("hello " +name);
+    })("Tom");
+
+    (function(){
+      var x=10;
+          y=20;
+      console.log(x+y);
+    })();*/
+    
+    /*var i=0;
+    function show(){
+      console.log(i++);
+      var tid = setTimeout(function(){
+        show();
+      },1000);
+      if(i>10){
+        clearTimeout(tid);
+      }
+    }
+    show();*/
+
+    /*
+    配列：グループ化されたデータ
+    */
+    /*var score = [100,300,500,"manaka"];
+    //console.log(score[0]);//添字0,1,2,...
+    score[2] = 400;
+    console.log(score);*/
+    /*var m = [
+      [1,2,3],
+      [4,5,6]
+    ];
+    console.log(m[1][1]);*/
+
+    /*
+    オブジェクト
+      名前と値
+    */
+    /*var user = {
+      email: "manaka@gmail.com",//プロパティ
+      score: 80,
+      greet: function(name) {//メソッド
+        console.log("hello, "+name+" from "+this.email);
+      }
+    };
+    // console.log(user["email"]);
+    // console.log(user.email);
+    // user.score=100;
+    // console.log(user);
+    user.greet("Tom");*/
+
+    /*
+    組み込みオブジェクト
+
+    -String
+    -Array
+    -Math
+    -Date
+    */
+    /*//var s = new String("manaka");//文字列オブジェクト
+    var s = "manaka";//文字列リテラル
+    console.log(s.length);
+    console.log(s.replace("m","M"));
+    console.log(s.substr(1,3));*/
+
+    /*var a = new Array(100,300,200);//配列オブジェクト
+    //var a = [100,300,200];
+    console.log(a.length);
+    // unshift -> array <- push
+    // shift <- array -> pop
+    a.push(500);
+    console.log(a);
+    a.splice(1,2,800,1000);
+    console.log(a);*/
+
+    /*console.log(Math.PI);
+    console.log(Math.ceil(5.3));
+    console.log(Math.floor(5.3));
+    console.log(Math.round(5.3));
+    console.log(Math.random());
+
+    var d = new Date();
+    // var d = new Date(2017, 7, 2, 17, 17, 49);
+    console.log(d.getFullYear());
+    console.log(d.getMonth());
+    console.log(d.getTime());//1970/1/1*/
+
+    // console.dir(window);
+    // console.log(window.outerHeight);
+    // window.location.href="http://keyakizaka46.com";
+
+    // window.document - 今開いているページ
+    // document object model (DOM)
+
+    var e = document.getElementById('msg');
+    e.textContent = 'hello!';
+    e.style.color = 'red';
+    e.className = 'myStyle';
+
+
+    document.getElementById('add').addEventListener('click',function(){
+        var greet = document.createElement('p');
+            text = document.createTextNode('志田 愛佳');
+        document.body.appendChild(greet).appendChild(text);
+    });
+
+    var x=50;
+    x *= 10;
+    x++;
+    // console.log(x);
+    if (!(x===500)) {
+      console.log("YES!");
+    }
+    else{
+      console.log("NO!");
+    }
+
+
+
+
+
+  </script>
+</body>
+</html>
